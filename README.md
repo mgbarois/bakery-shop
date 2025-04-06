@@ -49,7 +49,7 @@ So, in order to view the page correctly, you will need to run a local server. He
 If you have Python3 installed, run:
 
 ```
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
 #### Option 2: VS Code Live Server Extension

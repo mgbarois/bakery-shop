@@ -4,7 +4,7 @@ const createCard = (product) => {
   card.classList.add("product-card");
   card.innerHTML = `<img src=${product.img} alt="${product} image" class="product-image" />
     <button class="add-to-cart">
-      <img class="cart-icon" src="assets/images/icon-add-to-cart.svg" alt="Shopping cart icon" />
+      <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg" alt="Shopping cart icon" />
       <span>Add to cart</span>
     </button>
     <div class="product-details">

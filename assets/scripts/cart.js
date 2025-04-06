@@ -25,7 +25,7 @@ const toggleCartButton = (addBtn) => {
   addBtnContainer.classList.add("add-to-cart-controls");
 
   const decrementBtn = document.createElement("button");
-  decrementBtn.innerHTML = `<img src="/assets/images/icon-decrement-quantity.svg" alt="Decrement quantity"/>`;
+  decrementBtn.innerHTML = `<img src="./assets/images/icon-decrement-quantity.svg" alt="Decrement quantity"/>`;
   decrementBtn.addEventListener("click", () => {
     productQuantity--;
     quantitySpan.innerText = productQuantity;
@@ -33,7 +33,7 @@ const toggleCartButton = (addBtn) => {
   });
 
   const incrementBtn = document.createElement("button");
-  incrementBtn.innerHTML = `<img src="/assets/images/icon-increment-quantity.svg" alt="Increment quantity"/>`;
+  incrementBtn.innerHTML = `<img src="./assets/images/icon-increment-quantity.svg" alt="Increment quantity"/>`;
   incrementBtn.addEventListener("click", () => {
     productQuantity++;
     quantitySpan.innerText = productQuantity;
@@ -59,11 +59,7 @@ const updateCart = (productName, productQuantity, productPrice) => {
 
     if (!existingCartItemDiv) {
       // Create new cart item if it does not yet exist
-      const newCartItemDiv = createCartItem(
-        productName,
-        productQuantity,
-        productPrice
-      );
+      const newCartItemDiv = createCartItem(productName, productQuantity);
 
       const removeItemBtn = createRemoveBtn(productName, newCartItemDiv);
       newCartItemDiv.append(removeItemBtn);
@@ -95,7 +91,7 @@ const getCartItemDiv = (productName) => {
 const createRemoveBtn = (productName) => {
   const removeButton = document.createElement("div");
   removeButton.classList.add("remove-from-cart");
-  removeButton.innerHTML = `<button type="button"><img src="/assets/images/icon-remove-item.svg" alt="Remove"></button>`;
+  removeButton.innerHTML = `<button type="button"><img src="./assets/images/icon-remove-item.svg" alt="Remove"></button>`;
   removeButton.addEventListener("click", () => {
     removeProductFromCart(productName);
   });
@@ -115,7 +111,7 @@ const removeProductFromCart = (productName) => {
       const addBtn = document.createElement("button");
       addBtn.classList.add("add-to-cart");
       addBtn.innerHTML = `
-      <img class="cart-icon" src="assets/images/icon-add-to-cart.svg" alt="Shopping cart icon" />
+      <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg" alt="Shopping cart icon" />
       <span>Add to cart</span>`;
       addBtn.addEventListener("click", () => toggleCartButton(addBtn));
       addControls.replaceWith(addBtn);

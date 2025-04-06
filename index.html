@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Frontend Mentor | Product list with cart</title>
   </head>
   <body>
@@ -27,7 +27,7 @@
           <h2>Your cart (<span id="total-quantity">0</span>)</h2>
           <div id="cart-placeholder">
             <img
-              src="/assets/images/illustration-empty-cart.svg"
+              src="./assets/images/illustration-empty-cart.svg"
               alt="Empty cart"
             />
             <p>There are no items in your cart yet.</p>
@@ -42,7 +42,7 @@
             </div>
             <div id="carbon-neutral-info">
               <img
-                src="/assets/images/icon-carbon-neutral.svg"
+                src="./assets/images/icon-carbon-neutral.svg"
                 alt="carbon-neutral"
               />
               This is a&nbsp;<strong>carbon neutral</strong>&nbsp;delivery.
@@ -52,7 +52,7 @@
               <div class="modal-content">
                 <span class="close">&times;</span>
                 <img
-                  src="/assets/images/icon-order-confirmed.svg"
+                  src="./assets/images/icon-order-confirmed.svg"
                   class="order-confirmed-icon"
                   alt="Check mark"
                 />
@@ -73,15 +73,15 @@
       </div>
     </footer>
     <script type="module">
-      import products from "/assets/scripts/products.js";
-      import createCard from "/assets/scripts/card.js";
+      import products from "./assets/scripts/products.js";
+      import createCard from "./assets/scripts/card.js";
 
       products.forEach((product) => {
         const mainSection = document.querySelector("#product-list");
         mainSection.appendChild(createCard(product));
       });
     </script>
-    <script type="module" src="/assets/scripts/cart.js"></script>
-    <script type="module" src="/assets/scripts/modal.js"></script>
+    <script type="module" src="./assets/scripts/cart.js"></script>
+    <script type="module" src="./assets/scripts/modal.js"></script>
   </body>
 </html>

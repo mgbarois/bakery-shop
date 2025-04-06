@@ -1,6 +1,6 @@
 import products from "./products.js";
 
-const createCartItem = (productName, productQuantity, productPrice) => {
+const createCartItem = (productName, productQuantity) => {
   const product = products.find((product) => {
     return product.name === productName;
   });
