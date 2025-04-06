@@ -1,0 +1,28 @@
+@import 'variables';
+
+@mixin flex-center($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin styled-button {
+    font-family: $main-font;
+    border: 1px solid gainsboro;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@mixin primary-button {
+    @include styled-button;
+    background-color: $primary-color;
+    border: 1px solid transparent;
+    color: #fff;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+  <body>
+    <main>
+      <section id="products-section">
+        <div id="products-container">
+          <h1>Desserts</h1>
+          <div id="product-list"></div>
+        </div>
+      </section>
+      <section id="sidebar-section">
+        <div id="cart" class="empty">
+          <h2>Your cart (<span id="total-quantity">0</span>)</h2>
+          <div id="cart-placeholder">
+            <img
+              src="/assets/images/illustration-empty-cart.svg"
+              alt="Empty cart"
+            />
+            <p>There are no items in your cart yet.</p>
+          </div>
+          <div id="cart-content">
+            <div id="order-summary" class="order-summary">
+              <div id="products-in-cart" class="products-in-cart"></div>
+              <div id="order-total" class="order-total">
+                <div>Order total:</div>
+                <div id="total-amount" class="total-amount">$0.00</div>
+              </div>
+            </div>
+            <div id="carbon-neutral-info">
+              <img
+                src="/assets/images/icon-carbon-neutral.svg"
+                alt="carbon-neutral"
+              />
+              This is a&nbsp;<strong>carbon neutral</strong>&nbsp;delivery.
+            </div>
+            <button type="button" id="confirm-order">Confirm order</button>
+            <div id="order-confirmed-modal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img
+                  src="/assets/images/icon-order-confirmed.svg"
+                  class="order-confirmed-icon"
+                  alt="Check mark"
+                />
+                <h1>Order confirmed</h1>
+                <p>We hope you enjoy your food!</p>
+                <div class="order-summary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Madeleine</a>.
+      </div>
+    </footer>
+    <script type="module">
+      import products from "/assets/scripts/products.js";
+      import createCard from "/assets/scripts/card.js";
+
+      products.forEach((product) => {
+        const mainSection = document.querySelector("#product-list");
+        mainSection.appendChild(createCard(product));
+      });
+    </script>
+    <script type="module" src="/assets/scripts/cart.js"></script>
+    <script type="module" src="/assets/scripts/modal.js"></script>
+  </body>
+</html>

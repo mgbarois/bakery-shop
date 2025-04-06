@@ -1,0 +1,25 @@
+$primary-color: rgb(230, 111, 68);
+$background-color: rgb(244, 237, 235);
+$box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$border-radius: .7em;
+
+@font-face {
+    font-family: RedHatText;
+    src: url('/assets/fonts/static/RedHatText-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: RedHatText;
+    src: url('/assets/fonts/static/RedHatText-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: RedHatText;
+    src: url('/assets/fonts/static/RedHatText-Bold.ttf');
+    font-weight: 700;
+}
+
+$main-font : RedHatText;
+
